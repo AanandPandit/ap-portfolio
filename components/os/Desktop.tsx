@@ -115,7 +115,7 @@ export default function Desktop() {
             </div>
 
             {/* Profile Card - Right Side */}
-            <div className="absolute top-8 right-8 z-10 max-w-md">
+            <div className="absolute top-8 right-8 z-0 max-w-md">
                 <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-2xl">
                     <div className="text-center space-y-4">
                         <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white/20 shadow-xl">
