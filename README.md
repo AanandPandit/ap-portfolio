@@ -138,4 +138,4 @@ MIT License - feel free to use this project for your own portfolio!
 
 ## Credits
 
-Built by [Your Name] using Next.js and modern web technologies.
+Built by Aanand Pandit using Next.js and modern web technologies.
