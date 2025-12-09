@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
+@theme {
+  --color-windows-bg: #1f1f1f;
+  --color-windows-glass: rgba(32, 32, 32, 0.7);
+  --color-windows-border: rgba(255, 255, 255, 0.1);
+  --color-windows-accent: #60cdff;
+  --color-windows-hover: rgba(255, 255, 255, 0.05);
+  --color-taskbar-bg: rgba(32, 32, 32, 0.85);
+
+  --font-segoe: "Segoe UI", "SegoeUI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #111111;
+  /* Desktop background */
+  --foreground: #ffffff;
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-segoe);
+  overflow: hidden;
+  /* Prevent body scroll, desktop handles it */
+  user-select: none;
+  /* Desktop feel */
+
+  /* background-image: url('/assets/images/windows-11-bg.jpg'); */
+  background: radial-gradient(circle at center, #2e1a47 0%, #0c0a1f 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Custom scrollbar for windows */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Hide Next.js development indicator */
+#__next-build-watcher,
+nextjs-portal {
+  display: none !important;
 }
