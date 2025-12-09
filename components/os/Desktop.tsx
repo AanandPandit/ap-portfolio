@@ -114,6 +114,28 @@ export default function Desktop() {
                 />
             </div>
 
+            {/* Profile Card - Right Side */}
+            <div className="absolute top-8 right-8 z-10 max-w-md">
+                <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-2xl">
+                    <div className="text-center space-y-4">
+                        <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white/20 shadow-xl">
+                            <img src="/assets/images/profile.jpg" alt="Aanand Pandit" className="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                            <h1 className="text-3xl font-bold text-white mb-2">Aanand Pandit</h1>
+                            <p className="text-sm text-blue-300 leading-relaxed">
+                                Data Scientist | Computer Vision | AI & ML | Python, Deep Learning, IoT Projects
+                            </p>
+                        </div>
+                        <div className="pt-4 border-t border-white/10">
+                            <p className="text-xs text-gray-300 italic">
+                                ✨ Explore the OS to find out more about me
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* Windows Area */}
             {windows.map(win => (
                 <Window
